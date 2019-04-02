@@ -1,5 +1,4 @@
-def my_collect
-  def hello_t(array)
+def my_collect(array)
   if block_given?
     i = 0
  
