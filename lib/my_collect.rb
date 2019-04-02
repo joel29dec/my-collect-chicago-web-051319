@@ -3,15 +3,16 @@
 def my_collect(array)
   if block_given?
     i = 0
+    new_arr = [] 
      while i < array.length
-      yield(array[i])
+      new_arr << yield(array[i])
       i = i + 1
     end
-    array
+    new_arr
   end
 end
 
 array = ["Tim Jones", "Tom Smith", "Jim Campagno"]
 my_collect(array) do |name|
-  puts name.split(" ").first
+  name.split(" ").first
 end
